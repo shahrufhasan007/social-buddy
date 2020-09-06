@@ -13,10 +13,11 @@ const AllPosts = () => {
 
     const displayStyle ={
         display: 'grid',
-        gridTemplateColumns: 'auto auto auto auto auto auto auto',
+        gridTemplateColumns: 'auto auto auto auto',
         gridTemplateRows: 'auto auto',
         gridGap: '50px',
-        padding: '5px',
+        padding: '15px',
+        margin: '10px',
         width:'100%',
     };
     return (

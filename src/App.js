@@ -10,20 +10,23 @@ import {
 import NotFound from './components/NotFound/NotFound';
 import AllPosts from './components/Home/AllPosts';
 import PostDetail from './components/PostDetail/PostDetail';
+import Comment from './components/Comment/Comment';
 
 function App() {
 
   return (
     <div>
       <NavBar></NavBar>
-
       <Router>
         <Switch>
           <Route exact path="/">
           <AllPosts/>
           </Route>
           <Route path="/posts/:postId">
-            <PostDetail></PostDetail>
+            <PostDetail/>
+          </Route>
+          <Route path="/comments/:commentId">
+            <Comment/>
           </Route>
           <Route path="/home">
           <AllPosts/>
@@ -33,7 +36,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
     </div>
   );
 }

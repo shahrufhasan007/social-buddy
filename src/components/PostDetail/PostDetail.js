@@ -23,6 +23,7 @@ const useStyles = makeStyles({
 const POstDetail = () => {
     const classes = useStyles();
     const {postId} = useParams();
+    const {commentId} = useParams();
     const [post, setPost] = useState({});
     useEffect(() =>{
         const url = `https://jsonplaceholder.typicode.com/posts/${postId}`
@@ -53,7 +54,7 @@ const POstDetail = () => {
                     </CardActionArea>
                     <CardActions>
                         <Button variant="contained" color="secondary">
-                            {/* <Link to={`/posts/${id}`}>See More</Link> */}
+                            <Link to={`/comments/${commentId}`}>Comments</Link>
                         </Button>
                     </CardActions>
                 </Card>
